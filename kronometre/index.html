@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(123, 123, 255, 0.468);
+
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .container {
+      width: 50%;
+      height: 40%;
+      margin: 5rem auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color: rgba(123, 123, 255, 0.468);
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+    }
+
+    form label {
+      display: flex;
+      flex-direction: column;
+      margin: 0 1rem;
+    }
+
+    #secilen-dk,
+    #secilen-sn {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    #baslat,
+    #sıfırla {
+      cursor: pointer;
+      padding: 0.5rem;
+      border: none;
+      background: rgb(184, 63, 63);
+      border-radius: 10px;
+    }
+
+    #baslat:hover {
+      background: rgb(226, 70, 70);
+    }
+
+    #sıfırla {
+      background: rgb(63, 184, 89);
+    }
+
+    #sıfırla:hover {
+      background: rgb(76, 226, 108);
+    }
+
+    #Durmak {
+      cursor: pointer;
+      padding: 0.5rem;
+      border: none;
+      background: rgb(184, 63, 63);
+      border-radius: 10px;
+    }
+
+    #Durmak:hover {
+      background: rgb(226, 70, 70);
+    }
+
+    #durdum {
+      cursor: pointer;
+      padding: 0.5rem;
+      border: none;
+      background: rgb(255, 9, 9);
+      border-radius: 10px;
+    }
+
+    #durdum:hover {
+      background: rgb(219, 143, 143);
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1><span id="dakika">00</span>:<span id="saniye">00</span></h1>
+    <form>
+      <label>
+        Dakika
+        <input id="secilen-dk" type="number" min="0" max="59" value="00" />
+      </label>
+      <label>
+        Saniye
+        <input id="secilen-sn" type="number" min="0" max="59" value="00" />
+      </label>
+    </form>
+    <button id="baslat">Başlat</button>
+    <button id="durdum" onclick="durduk()">Durdur</button>
+
+    <button id="sıfırla">Sıfırla</button>
+    <button id="Durmak" onclick="startkrono()">Kronometre</button>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
