@@ -1,0 +1,128 @@
+.buttonlar button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #44332e;
+  border: none;
+  color: #fffb79;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonlar button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonlar button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonlar button:hover span {
+  padding-right: 25px;
+}
+
+.buttonlar button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.a {
+  background-color: #fffb79;
+  left: 37%;
+  top: 80;
+  position: absolute;
+}
+
+.buttonlar {
+  background-color: aquamarine;
+}
+
+.body {
+  font-weight: bold;
+}
+
+.cerceve {
+  width: 300px;
+  height: 500px;
+  background-color: #f9f103;
+  margin-left: 35%;
+}
+
+.kuu {
+  margin-left: 17%;
+  border-radius: 20px;
+  background-color: rgb(0, 0, 0);
+  width: 200px;
+  height: 200px;
+}
+
+.cll {
+  width: 200px;
+  margin-left: 100px;
+}
+
+
+
+
+
+#genelCerceve {
+  background-color: lightblue;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+}
+
+#mesajGirisi {
+  background-color: rgb(212, 255, 169);
+  border-radius: 10px;
+  width: 400px;
+  height: 70px;
+}
+
+#mesajGirisi > img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+#mesajGirisi > input {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+#mesajKutulari {
+  background-color: rgb(255, 136, 136);
+  border-radius: 3px;
+  width: 380px;
+  height: auto;
+  margin-left: 10px;
+}
+
+.gidenMesaj {
+  border-bottom: 2px gray solid;
+}
+
+.gidenMesaj > img {
+  width: 20px;
+  height: 20px;
+  margin: 5px 5px 0px 5px;
+}
+
+#tarih {
+  color: gray;
+  font-size: 10px;
+}
