@@ -1,0 +1,1 @@
+Dosyanın doğru bir şekilde çalışması için Anasayfa.html'nin açılması gerekmektedir.
