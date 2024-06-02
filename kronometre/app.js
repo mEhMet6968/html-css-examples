@@ -14,6 +14,8 @@ secilenDk.addEventListener("change", () => {
 });
 
 secilenSn.addEventListener("change", () => {
+  saniye.textContent =
+    secilenSn.value < 10 ? "0" + secilenSn.value : secilenSn.value;
 });
 function durduk(){
   dur = true;

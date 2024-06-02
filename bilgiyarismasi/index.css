@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body{height: 100%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin: 0;
+}
+
+#board {
+    width: 25%;
+    height: 20%;
+    margin-top: 20px;
+    right: 20px;
+    background-color: rgb(42, 44, 136);
+
+    border-radius: 15px;
+    color: white;
+    position: absolute;
+    font-size: 1.5em;
+
+}
+
+#board .dybaslik {
+    text-align: left;
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+
+#board #d_sayisi,
+#y_sayisi {
+    text-align: right;
+    width: 40%;
+    float: left;
+}
+
+#board #puan {
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    
+}
+#soru_kutusu{
+    margin: auto;
+    width: 75%;
+    background-color: rgb(48, 9, 80);
+    height: 55%;
+   position:relative;
+   top: 25%;
+   border-radius: 30px;
+   box-shadow: 5px 10px black;
+   padding: 5px;
+   display: none; 
+}
+#soru_kutusu #sorumetni{
+    background-color: aqua;
+    width: 90%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    box-shadow: 0px 0px 10px inset darkcyan ;
+    position: relative;
+    margin: auto;
+    height: 50%;
+    border: 7px solid rgb(87, 54, 237);
+    border-radius: 20px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: larger;
+    padding: 2%;
+    display: none; 
+
+}
+ #soru_kutusu #cevaplar{
+    margin-top: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    display: none; 
+
+}
+#soru_kutusu #a,#b,#c,#d{
+    padding: 5px;
+    margin: 5px;
+    background-color: 599859;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 10px;
+    font-size: 1.2em;
+    display: none; 
+}
+#a:hover{
+    background-color: rgb(184, 199, 70);
+}
+#d:hover{
+    background-color: rgb(170, 104, 233);
+}
+#c:hover{
+    background-color: rgb(170, 104, 233);
+}
+#b:hover{
+    background-color: rgb(170, 104, 233);
+}

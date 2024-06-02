@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilgi</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+   let sorular=
+   [
+ {
+  "soru": "1)CSS, HTML'deki hangi özelliği kontrol etmek için kullanılır?",
+  "a": "Veritabanı bağlantıları",
+  "b": "Sayfa yapısı\"",
+  "c": "Stil ve görünüm",
+  "d": "Sunucu İşlemleri",
+  "cevap": "C"
+ },
+ {
+  "soru": "2)HTML'de bir metni kalın göstermek için hangi etiket kullanılır?\\n",
+  "a": "bold",
+  "b": "strong",
+  "c": "b",
+  "d": "em",
+  "cevap": "C"
+ },
+ {
+  "soru": "3)Hangi CSS özelliği bir elementin sağ, sol, üst ve alt kenarlarını belirlemek için kullanılır?",
+  "a": "border-radius",
+  "b": "border-width",
+  "c": "padding",
+  "d": "margin",
+  "cevap": "A"
+ },
+ {
+  "soru": "4)Bir HTML formunda kullanıcıya bir metin girişi sağlamak için hangi etiket kullanılır?",
+  "a": "text",
+  "b": "input type=text",
+  "c": "textbox",
+  "d": "textfield",
+  "cevap": "B",
+ },
+ {
+  "soru": "5)CSS'de bir elementin arka plan rengini belirlemek için hangi özellik kullanılır?",
+  "a": " text-color ",
+  "b": " background-color ",
+  "c": " foreground-color ",
+  "d": " color",
+  "cevap": "B"
+ },
+ {
+  "soru": "6)HTML'de bir resim eklemek için hangi etiket kullanılır?",
+  "a": "img",
+  "b": "image",
+  "c": "picture",
+  "d": "photo",
+  "cevap": "A"
+ },
+ {
+  "soru": "7)Hangi CSS özelliği, bir elementin içeriğinin diğer elementlerin üstüne çıkmasını sağlar?",
+  "a": "z-index",
+  "b": "position",
+  "c": "position",
+  "d": "position",
+  "cevap": "A"
+ },
+ {
+  "soru": "8)Bir HTML linkini yeni bir tarayıcı penceresinde açmak için hangi özellik kullanılır?",
+  "a": " target=_new",
+  "b": " target=_blank",
+  "c": "target=_popup",
+  "d": "target=_window",
+  "cevap": "B"
+ },
+ {
+  "soru": "9)Hangi CSS özelliği, bir elementin boyutunu belirlemek için kullanılır?",
+  "a": "  size ",
+  "b": " dimension ",
+  "c": " width,height ",
+  "d": " size-width,size-height",
+  "cevap": "C"
+ },
+ {
+  "soru": "10)Bir HTML sayfasının başlık etiketi nedir?",
+  "a": "heading",
+  "b": "title",
+  "c": "head",
+  "d": "h1",
+  "cevap": "D"
+ },
+ {
+  "soru": "11)Hangisi C#'ta veri türlerinden biri değildir?",
+  "a": "int",
+  "b": "float ",
+  "c": "string",
+  "d": "array ",
+  "cevap": "D"
+ },
+ {
+  "soru": "12)C# dilinde döngü yapılarından biri aşağıdakilerden hangisidir?",
+  "a": "for",
+  "b": "loop",
+  "c": "repeat",
+  "d": "reackt",
+  "cevap": "A"
+ },
+ {
+  "soru": "13)C# dilinde bir class'ın üyelerine başka bir class içinden erişmek için hangi erişim belirleyicisi kullanılır?",
+  "a": "protected",
+  "b": "public",
+  "c": "private",
+  "d": "internal",
+  "cevap": "B"
+ },
+ {
+  "soru": "14)Hangi HTML etiketi, bir paragrafı temsil eder?",
+  "a": "text",
+  "b": "para",
+  "c": "paragraph",
+  "d": "p",
+  "cevap": "D"
+ },
+ {
+  "soru": "15)CSS'de, bir elementin kenarlarını yumuşatmak için hangi özellik kullanılır?",
+  "a": "order-radius ",
+  "b": "border-width ",
+  "c": "padding ",
+  "d": "margin",
+  "cevap": "A"
+ }
+];
+    </script>
+    <script>
+    let sorunun_cevabi
+    let dogrusayisi=0;
+let yanlisayisi=0;
+let puansayisi=0;
+let soru_numarasi=0;
+
+function basa_don() {
+            document.getElementById("soru_kutusu").style.display = "none";
+            document.getElementById("skor_board").style.display = "none";
+            document.getElementById("tt").style.display = "flex";
+
+
+            sorunun_cevabi = "";
+            puansayisi = 0;
+            dogrusayisi = 0;
+            yanlisayisi = 0;
+            soru_numarasi = 0;
+            skor_yaz();
+        }
+function soru_gelsin(soru_no){
+    if (soru_numarasi == sorular.length) {
+                swal({
+                    title: "Sorular Bitti",
+                    text: "Tebrikler",
+                    icon: "success",
+                    button: "Başa Dönmek için tıklayın.",
+                }).then(function () { basa_don() });
+
+
+            }
+            document.getElementById("tt").style.display = "none";
+            document.getElementById("soru_kutusu").style.display = "block";
+            document.getElementById("cevaplar").style.display = "block";
+ document.getElementById("sorumetni").style.display = "block";
+            document.getElementById("a").style.display = "block";
+ document.getElementById("b").style.display = "block";
+
+                document.getElementById("c").style.display = "block";
+ document.getElementById("d").style.display = "block";
+    document.getElementById("sorumetni").innerHTML = sorular[soru_no].soru;
+document.getElementById("a").innerHTML = sorular[soru_numarasi].a;
+document.getElementById("b").innerHTML = sorular[soru_no].b;
+document.getElementById("c").innerHTML = sorular[soru_no].c;
+document.getElementById("d").innerHTML = sorular[soru_no].d;
+ sorunun_cevabi = sorular[soru_no].cevap;
+
+
+}
+function skor_yaz(){
+    document.getElementById("d_sayisi").innerHTML=dogrusayisi;
+    document.getElementById("y_sayisi").innerHTML=yanlisayisi; 
+    document.getElementById("puanyazisi").innerHTML=puansayisi;
+}
+
+function cevaplandi(hangi_sik){
+  let kullanci_secimi = hangi_sik.getAttribute("data-secim");
+if(kullanci_secimi==sorunun_cevabi){
+    puansayisi = puansayisi+10;
+    dogrusayisi++;
+    
+    skor_yaz();
+  
+
+
+    swal({
+                    title: "İyi İş",
+                    text: "Tebrikler",
+                    icon: "success",
+                    button: "Aww yiss!",
+                }).then(function () { sonraki()});
+}
+else{
+    yanlisayisi++ 
+    
+    skor_yaz();   
+
+
+
+    swal({
+                    title: "Üzgünüz",
+                    text: "Hatalı Cevap Verdiniz",
+                    icon: "warning",
+                    button: "Aww yiss!",
+                }).then(function () {sonraki()});
+
+}
+}
+function sonraki(){
+soru_numarasi++;
+soru_gelsin(soru_numarasi);
+}
+    </script>
+</head>
+
+<body>
+
+
+    <button onclick="soru_gelsin(0)" id="tt">Yarışmaya başla</button>
+    <div id="board">
+        <div class="dybaslik">Doğru sayısı</div>
+        <div id="d_sayisi">-</div>
+        <div class="dybaslik">Yanlış sayısı</div>
+        <div id="y_sayisi">-</div>
+        <div id="puan">Puan: <span id="puanyazisi">-</span></div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="soru_kutusu">
+        <div id="sorumetni">
+            Soru Metni
+        </div>
+        <div id="cevaplar">
+            <div id="a" onclick="cevaplandi(this)" data-secim="A">A</div>
+            <div id="b" onclick="cevaplandi(this)" data-secim="B">B</div>
+            <div id="c" onclick="cevaplandi(this)" data-secim="C">C</div>
+            <div id="d" onclick="cevaplandi(this)" data-secim="D">D</div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
