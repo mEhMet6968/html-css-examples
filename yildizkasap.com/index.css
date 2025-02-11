@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.van{
+    background-color: rgb(247, 36, 36);
+}
+.navi {
+    z-index: 3;
+    width: 100%;
+    border-width: 3px;
+    background-color: rgb(225, 32, 32);
+	border-bottom-right-radius:  13px;
+    border-bottom-left-radius:  13px;
+}
+
+.navbar-brand {
+    padding-left: 2%; /* Logo ile Anasayfa yazısı arasına mesafe eklemek için */
+}
+
+.logon {
+	width: 4rem;
+	height: 4rem;
+}
+
+
+/* Eğer Anasayfa yazısı ile logo arasında mesafe eklemek istiyorsanız, yukarıdaki padding değerini artırabilirsiniz. */
+
+.carousel-inner img {
+    margin: auto;
+  }
+.masps{
+
+    height: 50%; /* Yüksekliği %50 olarak ayarladım, istediğiniz oranı kullanabilirsiniz */
+
+
+}
+.a{
+    height: 70%;
+    width: 100%;
+}
+.navbar-nav li {
+	float: right; /* Linkler arasına boşluk bırakmak için */
+}
+.call-buton .cc-calto-action-ripple {
+	
+	z-index: 99999;
+	right: 1rem;
+	bottom: 8rem;
+	background: #ec8b00;
+	width: 4rem;
+	height: 4rem;
+	padding: 1rem;
+	border-radius: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #ffffff;
+	-webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+	animation: cc-calto-action-ripple 0.6s linear infinite;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	justify-items: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-decoration: none;
+	 }
+	.call-buton .cc-calto-action-ripple i {
+	  -webkit-transition: 0.3s ease;
+	  transition: 0.3s ease;
+	  font-size: 2.2rem; }
+	.call-buton .cc-calto-action-ripple:hover i {
+	  -webkit-transform: rotate(135deg);
+	  transform: rotate(135deg); }
+		
+
+
+    .baslik{
+        font-family: "PT Serif", serif;
+        font-size:xx-large;
+        
+    }
+    .kk{ 
+    text-align: center;
+    }
+    .kaynak{
+        font-family: "PT Serif", serif;
+        font-size:x-large;
+        text-decoration:none;
+		text-align: center;
+    }
+
+/* .accordion-container sınıfınıza belirli bir genişlik ekleyin */
+.accordion-container {
+    max-width: 600px; /* Örnek olarak, maksimum 600 piksel genişlik */
+    margin: auto; /* Sayfanın ortasına hizalamak için */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #e5e5e5;
+}
+
+.gallery {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.1, 1.1);
+  transition: .3s transform;
+}
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
